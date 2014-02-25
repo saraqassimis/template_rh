@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:ui="http://java.sun.com/jsf/facelets"
+       xmlns:h="http://java.sun.com/jsf/html"
+       xmlns:f="http://java.sun.com/jsf/core"       
+       xmlns:rich="http://richfaces.org/rich"
+       xmlns:b="http://richfaces.org/sandbox/bootstrap">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListEmployeTitle}"></h:outputText>
+        </ui:define>
+             
+         <ui:define name="menu2">
+                    <div class="container">
+            <div class="row">
+                <div class="span7">
+                    <header class="page-header">
+                        <h3>Espace<br/>
+                            <small>Admin</small>
+                        </h3>
+                    </header>
+                </div>
+                <div class="page-nav-options">
+                    <div class="span9">
+                        <ul class="nav nav-pills">
+                            <li>
+                                <a href="../index.xhtml"><i class="icon-home icon-large"></i></a>
+                            </li>
+                        </ul>
+                        <ul class="nav nav-tabs">
+                           
+                            <li><a href="#">Gestion des postes</a></li>
+                            <li><a href="#">Gestion des evaluations</a></li>
+                            <li><a href="#">Gestion des compétances</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </ui:define>
+        <ui:define name="body">
+            
+            <h:form styleClass="jsfcrud_list_form">
+                    <div class="row">
+            <div class="span8">
+                <div class="box">
+                    <div class="box-header">
+                        <i class="icon-bookmark"></i>
+                        <h5>Shortcuts</h5>
+                    </div>
+                    <div class="box-content">
+                        <div class="btn-group-box">
+                            <h:commandLink class="btn" action="adminHome.xhtml"><br/><i class="icon-dashboard icon-large"/><br/>Dashboard</h:commandLink>
+                            <button class="btn"><i class="icon-user icon-large"></i><br/>Account</button>
+                            <button class="btn"><i class="icon-search icon-large"></i><br/>Search</button>
+                            <button class="btn"><i class="icon-list-alt icon-large"></i><br/>Reports</button>
+                            <button class="btn"><i class="icon-bar-chart icon-large"></i><br/>Charts</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="span8">
+                <div class="blockoff-left">
+                    <legend class="lead">
+                        Welcome
+                    </legend>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </div>
+            </div>
+        </div>                  
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

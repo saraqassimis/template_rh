@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:ui="http://java.sun.com/jsf/facelets"
+       xmlns:h="http://java.sun.com/jsf/html"
+       xmlns:f="http://java.sun.com/jsf/core"       
+       xmlns:rich="http://richfaces.org/rich"
+       xmlns:b="http://richfaces.org/sandbox/bootstrap">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListEmployeTitle}"></h:outputText>
+        </ui:define>
+             
+         <ui:define name="menu2">
+                    <div class="container">
+            <div class="row">
+                <div class="span7">
+                    <header class="page-header">
+                        <h3>Espace<br/>
+                            <small>Admin</small>
+                        </h3>
+                    </header>
+                </div>
+                <div class="page-nav-options">
+                    <div class="span9">
+                        <ul class="nav nav-pills">
+                            <li>
+                                <a href="../index.xhtml"><i class="icon-home icon-large"></i></a>
+                            </li>
+                        </ul>
+                        <ul class="nav nav-tabs">
+                            <li class="active">
+                                <a href="../index.xhtml"><i class="icon-home"></i>Home</a>
+                            </li>
+                            <li><a href="#">Catalogues de formations</a></li>
+                            <li><a href="#">Plans de Formation</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                                      
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
