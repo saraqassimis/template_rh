@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:ui="http://java.sun.com/jsf/facelets"
+       xmlns:h="http://java.sun.com/jsf/html"
+       xmlns:f="http://java.sun.com/jsf/core"       
+       xmlns:rich="http://richfaces.org/rich"
+       xmlns:b="http://richfaces.org/sandbox/bootstrap">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListEmployeTitle}"></h:outputText>
+        </ui:define>
+             
+         <ui:define name="menu2">
+                    <div class="container">
+            <div class="row">
+                <div class="span7">
+                    <header class="page-header">
+                        <h3>Espace<br/>
+                            <small>Admin</small>
+                        </h3>
+                    </header>
+                </div>
+                <div class="page-nav-options">
+                    <div class="span9">
+                        <ul class="nav nav-pills">
+                            <li>
+                                <a href="../index.xhtml"><i class="icon-home icon-large"></i></a>
+                            </li>
+                        </ul>
+                        <ul class="nav nav-tabs">
+                            <li class="active">
+                                <a href="../index.xhtml"><i class="icon-home"></i>Home</a>
+                            </li>
+                            <li><a href="admin.xhtml">Gestion des employés</a></li>
+                            <li><a href="#">Gestion des utilisateurs</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                                        <div id="table-bottom">
+                            <div >
+                                <br />
+                                <h:commandLink action="#{employeController.prepareCreate}" value="#{bundle.ListEmployeCreateLink}"/>
+                                <br />
+                                <rich:dataTable  id="fonction" value="#{employeController.items}" var="item"  rowClasses="row1, row2"   rows="4"
+                                                 columnClasses="50,100,100,100" onrowmousemove="this.style.backgroundColor='#B5F3FB'"
+                                                 onrowmouseout="this.style.backgroundColor='#{a4jSkin.rowBackgroundColor}'"
+                                                 styleClass="tablestyle">
+
+                                    <rich:column   sortBy="#{item.id}"> 
+                                        <f:facet name="header">
+                                            <h:outputText value="#{bundle.ListEmployeTitle_id}"/>
+                                        </f:facet>
+                                        <h:outputText value="#{item.id}"/>
+                                    </rich:column> 
+									<rich:column   sortBy="#{item.nom}"> 
+                                        <f:facet name="header">
+                                            <h:outputText value="#{bundle.ListEmployeTitle_nom}"/>
+                                        </f:facet>
+                                        <h:outputText value="#{item.nom}"/>
+                                    </rich:column> 
+									<rich:column   sortBy="#{item.prenom}"> 
+                                        <f:facet name="header">
+                                            <h:outputText value="#{bundle.ListEmployeTitle_prenom}"/>
+                                        </f:facet>
+                                        <h:outputText value="#{item.prenom}"/>
+                                    </rich:column> 
+									<rich:column   sortBy="#{item.emploi}"> 
+                                        <f:facet name="header">
+                                            <h:outputText value="#{bundle.ListEmployeTitle_emploi}"/>
+                                        </f:facet>
+                                        <h:outputText value="#{item.emploi}"/>
+                                    </rich:column> 
+                                   
+                                    <rich:column>
+                                        <f:facet name="header">
+                                            <h:outputText value="&nbsp;"/>
+                                        </f:facet>
+                                        
+                                        
+                                        
+                                        <h:commandLink action="#{employeController.prepareView}" >
+                                           <i class="icon-eye-close" style="font-size:20px;"/> View
+                                        </h:commandLink>
+                                      <h:outputText value="&nbsp;"/>
+                                        
+                                            
+                                       <h:commandLink  action="#{employeController.prepareEdit}" >
+                                           <i class="icon-pencil" style="font-size:20px;"/>Edit
+                                         </h:commandLink>
+                                       <h:outputText value="&nbsp;"/>
+                                       
+                                            <h:commandLink  action="#{employeController.destroy}" >
+                                           <i class="icon-trash" style="font-size:20px;"/>Remove
+                                         </h:commandLink>
+                                            
+                                        
+                                   
+                                    </rich:column>
+                                    <f:facet name="footer">
+                                        <rich:dataScroller for="fonction" maxPages="20"></rich:dataScroller>
+
+                                        
+                                    </f:facet>
+                                </rich:dataTable>
+                            </div>
+
+
+                        </div>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
