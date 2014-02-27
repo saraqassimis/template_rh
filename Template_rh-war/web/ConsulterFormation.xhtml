@@ -8,60 +8,95 @@
       xmlns:b="http://richfaces.org/sandbox/bootstrap">
     <h:head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-       <meta name="layout" content="main"/>
-        <title>Formations</title>
+        <title><ui:insert name="title">Default Title</ui:insert></title>
         <script type="text/javascript" src="http://www.google.com/jsapi"></script>
         <script src="js/jquery/jquery-1.8.2.min.js" type="text/javascript" ></script>
         <h:outputStylesheet name="css/customize-template.css"/>
-        
+
     </h:head>
-     <style>
+    <h:body>
+        <style>
             #body-content { padding-top: 40px;}
         </style>
-    <body>
-       
-         <div class="navbar navbar-fixed-top">
+        <div class="navbar navbar-fixed-top">
             <div class="navbar-inner">
                 <div class="container">
                     <button class="btn btn-navbar" data-toggle="collapse" data-target="#app-nav-top-bar">
                         <span class="icon-bar"></span>
-                        
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
                     </button>
-                   <a href="./index.xhtml" class="brand">
-                        <i>
-                        <span style="float:left;">  
-                            <img src="../../resources/images/tt.png" style="width:40px ;height: 35px ;" /> 
-                            <span style="line-height:10px;"> <span style="color: #0088CC;font-size:40pt; font-style: italic;font-weight: bold;font-family:  Palace Script MT;; " >Gestion</span>
-                               <span style="color: #ffffff; font-size: 20pt;font-style: italic;font-weight: bold;font-family: Graphite Std Light Narrow; ">RH</span>
-                            </span>
-                           </span> </i></a>
-                   <div id="app-nav-top-bar" class="nav-collapse">
-           
-       <button type="submit" class="btn btn-primary" style="margin-left: 870px;" >Logout</button> 
-   
+                    <a href="./index.xhtml" class="brand"><i class="icon-leaf">Gestion Des Ressources Humaines</i></a>
+                    <div id="app-nav-top-bar" class="nav-collapse">
+
+                        <ul class="nav pull-right">
+                            <li>
+                                <a href="#">Logout</a>
+                            </li>
+
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
 
-
         <div id="body-container">
             <div id="body-content">
-           <section class="nav nav-page">
+
+                <div class="body-nav body-nav-vertical">
                     <div class="container">
-            <div class="row">
-                    <header class="page-header">
-                        <br/>
-                        <span style="color: #0082CC; text-align:center;font-size: 20pt;font-style: italic;font-weight: bold;font-family: Graphite Std Light Narrow;">Bienvenue dans l'espace des Formations</span>
-                    </header>
-            </div>
-        </div>
+                        <ul>
+                                <li >
+                                    <a href="adminHome.xhtml">
+                                        <i class="icon-dashboard icon-large"></i> Dashboard
+                                    </a>
+                                </li>
+                                       <li>
+                                    <a href="admin.xhtml">
+                                        <i class="icon-briefcase icon-large"></i> Administration
+                                    </a>
+                                </li>
+                             <li>
+                                    <a href="carriere.xhtml">
+                                        <i class="icon-tasks icon-large"></i> Carrières
+                                    </a>
+                                </li>
+                             <li>
+                                    <a href="formation.xhtml">
+                                        <i class="icon-list-alt icon-large"></i> Formations
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="icon-calendar icon-large"></i> Schedule
+                                    </a>
+                                </li>
+                                
+                               
+                                <li>
+                                    <a href="#">
+                                        <i class="icon-cogs icon-large"></i> Settings
+                                    </a>
+                                </li>
+                               
+                                <li>
+                                    <a href="#">
+                                        <i class="icon-bar-chart icon-large"></i> Charts
+                                    </a>
+                                </li>
+                            </ul>
+                    </div>
+                </div>
+
+
+                <section class="nav nav-page">
+                    <ui:insert name="menu2">Default Menu2</ui:insert>
                 </section>
                 <section class="page container">
                     <ui:insert name="body">Default Body</ui:insert>
                 </section>
+
+
 
             </div>
         </div>
@@ -103,6 +138,6 @@
             });
         </script>
 
-    </body>
+    </h:body>
 
 </html>

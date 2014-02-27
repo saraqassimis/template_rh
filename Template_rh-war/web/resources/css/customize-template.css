@@ -226,7 +226,7 @@ a:hover {
   width: 538px;
 }
 .span8 {
-  width: 476px;
+  width: 76px;
 }
 .span7 {
   width: 414px;
@@ -3895,6 +3895,7 @@ input[type="submit"].btn.btn-mini {
   content: "";
   line-height: 0;
 }
+
 .navbar-inner:after {
   clear: both;
 }
@@ -6955,7 +6956,7 @@ table.tablesorter .headerSortUp:after {
   padding-top: 40px;
   padding-bottom: 100px;
    padding-top: 110px;
-   background: url("../images/test.jpg");
+   background: url("../images/greyzz.png");
 }
 .pattern.pattern-sandstone {
   background: #e9e9e9 url("../images/pattern/sandstone.png") repeat 0 0;
@@ -7803,9 +7804,9 @@ body,
     
 }
 body > #body-container {
-  height: auto;
+  height: 100%;
   min-height: 100%;
-  background: url("../images/test.jpg");
+  background: url("../images/greyzz.png");
 }
 .application-footer {
   background-color: #fcfcfc;
@@ -8080,7 +8081,7 @@ body > #body-container {
 }
 .container-signin {
   padding: 20px 100px 0 100px;
-  margin: 60px 0 0 0;
+  margin: 10px 0 0 0;
   background-color: #000000;
   box-shadow: 2px 2px 4px  ;
   border: 1px solid rgba(108, 145, 146, 0.1);
@@ -8093,14 +8094,15 @@ body > #body-container {
   color: #0088CC;
  
 }
+
 #styleTest{
     color:#ffffff ;
 }
 #bouttonTest{
- margin-left: 250px;   
+ margin-left:250px ;   
 }
 #bouttonTest1{
- margin-left: 650px;   
+ margin-left: 0px;   
 }
 .container-signin .form-inner {
   margin-left: 40px;
@@ -9222,7 +9224,7 @@ body > #body-container {
     width: 412px;
   }
   .span8 {
-    width: 364px;
+    width: 100px;
   }
   .span7 {
     width: 316px;
@@ -11504,7 +11506,7 @@ word-wrap:break-word;
 	width:810px;
 	padding-top:20px;
 	padding-bottom:20px;
-	background:#fff;
+	
 	padding-left:20px;
 	padding-right:20px;
 }
@@ -11534,10 +11536,11 @@ padding-right:20px;
 #footer-bottom
 {
 	background:#000000;
-	height:25px;
+	height:30px;
 	padding-top:8px;
 	color:#fff;
 	font-size:12px;
 	text-align:center;
 	width:100%;
 }
+
